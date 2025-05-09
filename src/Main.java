@@ -1,10 +1,10 @@
 import java.util.Scanner;
 import ru.mishaev.max.Company;
+import ru.mishaev.max.Deal;
+import ru.mishaev.max.Expenditure;
+import ru.mishaev.max.Sale;
 import taxes.USNIncome;
 import taxes.USNIncomeMinusExpenses;
-import ru.mishaev.max.Deal;
-import ru.mishaev.max.Sale;
-import ru.mishaev.max.Expenditure;
 
 public class Main {
     public static void main(String[] args) {
@@ -59,7 +59,8 @@ public class Main {
             } else {
                 deals[i] = new Expenditure(constructComment(products[i], prices[i], false), 0, prices[i]);
             }                   
-        }  
+        } 
+        company.setTaxSystem(new USNIncome()); // устанавливаем налоговую систему предприятия 
         int companyDebitMinusCredit = company.applyDeals(deals);   
         System.out.println("Разница между доходом и расходом на момент уплаты налогов: " + companyDebitMinusCredit);   
     } 
