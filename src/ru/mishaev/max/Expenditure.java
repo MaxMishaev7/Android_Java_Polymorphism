@@ -4,7 +4,7 @@ public class Expenditure extends Deal {
     // трата
     public Expenditure(String comment, int debitChange, int creditChange) {
         super(comment, debitChange, creditChange);
-        if (debitChange != 0) {debitChange = 0;}
+        if (this.debitChange != 0) {this.debitChange = 0;}
     }
     
 }

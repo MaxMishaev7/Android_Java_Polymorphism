@@ -33,11 +33,14 @@ public class Company {
         System.out.println();
         for (int i = 0; i < deals.length; i++) {
             if (deals[i].creditChange == 0) {
-                debit += deals[i].debitChange;
+                debit += deals[i].getDebitChange();
                 System.out.println(deals[i].comment);
-            } else if (deals[i].debitChange == 0) {
+            } else if (deals[i].getDebitChange() == 0) {
                 credit += deals[i].creditChange;
                 System.out.println(deals[i].comment);
+            } else {
+                debit += deals[i].getDebitChange();
+                credit += deals[i].getCreditChange();
             }
         }
         System.out.println("\nДоход компании: " + debit);

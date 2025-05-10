@@ -10,4 +10,24 @@ public class Deal {
         this.debitChange = debitChange;
         this.creditChange = creditChange;
     }
+
+    public String getComment(){
+        return comment;
+    }
+
+    public int getDebitChange() {
+        return debitChange;
+    }
+
+    public int getCreditChange() {
+        return creditChange;
+    }
+
+    public void setDebitChange(int debitChange) {
+        this.debitChange = Math.abs(debitChange);
+    }
+
+    public void setCreditChange(int creditChange) {
+        this.creditChange = Math.abs(creditChange);
+    }
 }

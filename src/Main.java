@@ -55,7 +55,7 @@ public class Main {
 
         for (int i = 0; i < 6; i++) {            
             if (i < 3) {
-                deals[i] = new Sale(constructComment(products[i], prices[i], true), prices[i], 0);           
+                deals[i] = new Sale(constructComment(products[i], prices[i], true), prices[i], 0);     
             } else {
                 deals[i] = new Expenditure(constructComment(products[i], prices[i], false), 0, prices[i]);
             }                   
